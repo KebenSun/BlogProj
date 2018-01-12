@@ -1,1 +1,1 @@
-https://docs.djangoproject.com/en/2.0/intro/tutorial03/
+http://docs.30c.org/djangobook2/chapter01/
