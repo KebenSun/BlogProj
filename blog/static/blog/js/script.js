@@ -149,4 +149,11 @@ if ( typeof define === 'function' && define.amd ) {
 
     triggerBttn.addEventListener( 'click', toggleOverlay );
     closeBttn.addEventListener( 'click', toggleOverlay );
+
+    // 循环标签云添加随机颜色
+    var d = $(".randomColor");
+
+    $.each(d,function (index,domEle){
+        $(domEle).attr('style','background-color: rgb( '+ Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ','+ Math.floor(Math.random() * 255)+ ')');
+    });
 })();

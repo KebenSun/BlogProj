@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block main %}
-    <article class="post post-{{ post.pk }}">
+    <article class="post post-{{ post.pk }} row-back">
         <header class="entry-header">
             <h1 class="entry-title">{{ post.title }}</h1>
             <div class="entry-meta">
@@ -73,8 +73,10 @@
     </section>
 {% endblock main %}
 {% block toc %}
-    <div class="widget widget-content">
-        <h3 class="widget-title">文章目录</h3>
+    <div class="widget widget-recent-content row-back">
+        <div class="aside-title">
+            <h3>文章目录</h3>
+        </div>
         {{ post.toc|safe }}
     </div>
 {% endblock toc %}

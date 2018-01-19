@@ -59,6 +59,7 @@ a:hover, a:focus {
 }
 
 body {
+	background-color:#F5F5F5;
     color: #444;
     font-family: 'Lato', sans-serif;
 }
@@ -178,13 +179,13 @@ img {
  * 3.2.1 - Main Nav CSS 3 Hover Effect
  */
 
-.cl-effect-11 a {
+/*.cl-effect-11 a {
     padding: 10px 0;
     color: #0972b4;
     text-shadow: none;
-}
+}*/
 
-.cl-effect-11 a::before {
+/*.cl-effect-11 a::before {
     position: absolute;
     top: 0;
     left: 0;
@@ -198,12 +199,12 @@ img {
     -webkit-transition: max-width 0.5s;
     -moz-transition: max-width 0.5s;
     transition: max-width 0.5s;
-}
+}*/
 
-.cl-effect-11 a:hover::before,
+/*.cl-effect-11 a:hover::before,
 .cl-effect-11 a:focus::before {
     max-width: 100%;
-}
+}*/
 
 /**
  * 4.0 - Home/Blog
@@ -234,7 +235,7 @@ img {
 }
 
 .entry-content {
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.9;
     font-weight: 300;
     color: #000;
@@ -257,8 +258,9 @@ img {
     font-weight: 400;
     word-spacing: 1px;
     letter-spacing: 0.01em;
-    text-align: center;
+    text-align: right;
     margin-top: 20px;
+    border-bottom:1px solid black!important;
 }
 
 .cl-effect-14 a {
@@ -360,15 +362,14 @@ img {
     line-height: 170%;
     margin-bottom: 10px;
 }
-
 .widget-recent-posts ul li::before {
-    content: '\f3d3';
+    content: '\02022';
     font-family: "Ionicons";
     position: absolute;
     left: -17px;
     top: 3px;
     font-size: 16px;
-    color: #000;
+    color: #FF7F50;
 }
 
 .widget-archives ul {
@@ -385,13 +386,13 @@ img {
 }
 
 .widget-archives ul li::before {
-    content: '\f3f3';
+    content: '\02022';
     font-family: "Ionicons";
     position: absolute;
     left: -25px;
     top: 1px;
     font-size: 16px;
-    color: #000;
+    color: #FF7F50;
 }
 
 .widget-category ul {
@@ -408,13 +409,13 @@ img {
 }
 
 .widget-category ul li::before {
-    content: '\f3fe';
+    content: '\02022';
     font-family: "Ionicons";
     position: absolute;
     left: -25px;
     top: 1px;
-    font-size: 18px;
-    color: #000;
+    font-size: 16px;
+    color: #FF7F50;
 }
 
 .widget-tag-cloud ul {
@@ -473,8 +474,8 @@ img {
 
 #header-search-box {
     position: absolute;
-    right: 38px;
-    top: 8px;
+    right: 25px;
+    top: 14px;
 }
 
 .search-form {
@@ -482,8 +483,9 @@ img {
     width: 25%;
     position: absolute;
     min-width: 200px;
-    right: -6px;
-    top: 33px;
+    right: -210px;
+    top: 0px;
+    border-radius: 10px;
 }
 
 #search-menu span {
@@ -492,8 +494,8 @@ img {
 
 #searchform {
     position: relative;
-    border: 1px solid #ddd;
-    min-height: 42px;
+    min-height: 40px;
+    margin-top: 5px;
 }
 
 #searchform input[type=search] {
@@ -501,14 +503,15 @@ img {
     border: none;
     position: absolute;
     left: 0;
-    padding: 10px 30px 10px 10px;
+    padding: 0px 30px 0px 10px;
     z-index: 99;
+    border-radius: 10px;
 }
 
 #searchform button {
     position: absolute;
     right: 6px;
-    top: 4px;
+    top: -4px;
     z-index: 999;
     background: transparent;
     border: 0;
