@@ -3,7 +3,7 @@
 
 {% block main %}
     {% for post in post_list %}
-        <article class="post post-1  row-back">
+        <article class="post post-{{ result.object.pk }}  row-back">
             <header class="entry-header">
                 <h1 class="entry-title title-new">
                     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
