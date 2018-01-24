@@ -19,7 +19,7 @@
             </header>
             <div class="entry-content clearfix">
                 <div style="width: 20%;height:138px;float: left;overflow: hidden;">
-                    <img src="{% static 'blog/img/2.jpg' %}"/>
+                    <img src="{{ MEDIA_URL }}{{ post.cover_pic }}"/>
                 </div>
                 <div style="margin-left:23%;">
                     <p>{{ post.excerpt }}...</p>

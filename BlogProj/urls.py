@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path(r'', include('blog.urls')),
     path(r'', include('comments.urls')),
     url(r'^search/', include('haystack.urls')),
+    url(r'media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]
