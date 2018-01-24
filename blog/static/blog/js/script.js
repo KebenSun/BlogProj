@@ -156,4 +156,22 @@ if ( typeof define === 'function' && define.amd ) {
     $.each(d,function (index,domEle){
         $(domEle).attr('style','background-color: rgb( '+ Math.floor(Math.random() * 255) + ',' + Math.floor(Math.random() * 255) + ','+ Math.floor(Math.random() * 255)+ ')');
     });
+
 })();
+
+layer.ready(function(){
+    // 添加联系方式二维码
+    var qrcodes = $(".qrcode");
+
+    $.each(qrcodes,function (index,domEle){
+        var domId = domEle.id;
+        domEle.addEventListener('click', function(){
+            layer.photos({
+                photos: '#' + domId
+                ,anim: false //0-6的选择，指定弹出图片动画类型，默认随机（请注意，3.0之前的版本用shift参数）
+                ,shift:-1
+            }); 
+        });
+        domEle.click();
+    });
+}); 

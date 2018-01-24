@@ -22,6 +22,7 @@
     <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{% static 'blog/js/pace.min.js' %}"></script>
     <script src="{% static 'blog/js/modernizr.custom.js' %}"></script>
+    <script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
 
     <style type="text/css">
         span.highlighted {
@@ -44,7 +45,8 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <h1><a href="{% url 'blog:index' %}"><b>Black</b> <span style="color:brown;">&amp;</span> White</a></h1>
+                    <!-- <h1><a href="{% url 'blog:index' %}"><b>Black</b> <span style="color:brown;">&amp;</span> White</a></h1> -->
+                    <img src="{% static 'blog/img/logo.png' %}" style="width: 120%;max-width: 120%">
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -123,16 +125,16 @@
                             <div style="background-image: url({% static 'blog/img/PP.jpg' %});"></div>
                         </li>
                         <li class="aside-content-li-1">
-                            <div>
-                                <img src="{% static 'blog/img/phone.svg' %}" title="18366666666"/>
+                            <div id="phone" class="qrcode">
+                                <img layer-src="{% static 'blog/img/2.jpg' %}" src="{% static 'blog/img/phone.svg' %}" title="手机号"/>
                             </div>
-                            <div>
+                            <div id="wechat" class="qrcode">
                                 <img src="{% static 'blog/img/weixin.svg' %}" title="sunkechong"/>
                             </div>
-                            <div>
+                            <div id="email" class="qrcode">
                                 <img src="{% static 'blog/img/mail.svg' %}" title="sun.kechong@outlook.com"/>
                             </div>
-                            <div>
+                            <div id="qq" class="qrcode">
                                 <img src="{% static 'blog/img/qq.svg' %}" title="137713125"/>
                             </div>
                             <div style="float: none;">
@@ -200,7 +202,7 @@
                                 <a href="{% url 'blog:tag' tag.pk %}">{{ tag.name }}</a>
                             </li>
                         {% empty %}
-                            暂无标签！
+                            &emsp;&emsp;暂无标签！
                         {% endfor %}
                     </ul>
                 </div>
