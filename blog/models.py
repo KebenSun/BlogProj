@@ -49,7 +49,7 @@ class Post(models.Model):
     modified_time = models.DateTimeField(verbose_name='修改时间')
 
     # 封面图片
-    cover_pic = models.ImageField(verbose_name="封面图片", upload_to='post', default='post/post_default.jpg')
+    cover_pic = models.ImageField(verbose_name="封面图片", upload_to='post', default='post/post_default.png')
 
     # 摘要
     excerpt = models.CharField(verbose_name='摘要', max_length=200, blank=True)

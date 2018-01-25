@@ -45,8 +45,7 @@
         <div class="row">
             <div class="col-md-4 col-sm-5 col-xs-8">
                 <div class="logo">
-                    <!-- <h1><a href="{% url 'blog:index' %}"><b>Black</b> <span style="color:brown;">&amp;</span> White</a></h1> -->
-                    <img src="{% static 'blog/img/logo.png' %}" style="width: 120%;max-width: 120%">
+                    <a href="{% url 'blog:index' %}"><img src="{% static 'blog/img/fullLogo.png' %}" style="width: 120%;max-width: 120%"></a>
                 </div>
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4">
@@ -126,16 +125,16 @@
                         </li>
                         <li class="aside-content-li-1">
                             <div id="phone" class="qrcode">
-                                <img layer-src="{% static 'blog/img/2.jpg' %}" src="{% static 'blog/img/phone.svg' %}" title="手机号"/>
+                                <img layer-src="{% static 'blog/img/phone.png' %}" src="{% static 'blog/img/phone.svg' %}" title="15698001240" class="hand" />
                             </div>
                             <div id="wechat" class="qrcode">
-                                <img src="{% static 'blog/img/weixin.svg' %}" title="sunkechong"/>
+                                <img layer-src="{% static 'blog/img/wechat.png' %}" src="{% static 'blog/img/weixin.svg' %}" title="sunkechong" class="hand"/>
                             </div>
-                            <div id="email" class="qrcode">
-                                <img src="{% static 'blog/img/mail.svg' %}" title="sun.kechong@outlook.com"/>
+                            <div id="email">
+                                <a href="mailto:sun.kechong@outlook.com"><img src="{% static 'blog/img/mail.svg' %}" title="sun.kechong@outlook.com"/></a>
                             </div>
                             <div id="qq" class="qrcode">
-                                <img src="{% static 'blog/img/qq.svg' %}" title="137713125"/>
+                                <img layer-src="{% static 'blog/img/qq.png' %}" src="{% static 'blog/img/qq.svg' %}" title="380187296" class="hand"/>
                             </div>
                             <div style="float: none;">
                             </div>

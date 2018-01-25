@@ -145,6 +145,9 @@
 	-o-animation:mymove 2s ease-out 5s backwards;
 	-ms-animation:mymove 2s ease-out 5s backwards;
 	}
+.hand {
+	cursor: pointer;
+}
 @keyframes mymove {
 	0% {
 		transform: translateX(-40px);
