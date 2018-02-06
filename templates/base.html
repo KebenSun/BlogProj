@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Black &amp; White</title>
+    <title>Keben &amp; Sun</title>
 
     <!-- meta -->
     <meta charset="UTF-8">
@@ -50,9 +50,9 @@
             </div><!-- col-md-4 -->
             <div class="col-md-8 col-sm-7 col-xs-4" style="width: 50%;">
                 <div class="search7 bar7">
-                    <form class="form-search">
-                        <input type="text" class="search-input" placeholder="请输入搜索内容...">
-                        <button type="submit" class="search-button"></button>
+                    <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
+                        <input type="text" class="search-input" name="q" placeholder="请输入搜索内容...">
+                        <button type="submit" class="search-button" style="right: 0px;top: 0px"></button>
                     </form>
                 </div>
             </div>
