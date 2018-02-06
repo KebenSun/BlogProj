@@ -21,8 +21,8 @@
                 <div style="width: 20%;height:138px;float: left;overflow: hidden;">
                     <img src="{{ MEDIA_URL }}{{ post.cover_pic }}"/>
                 </div>
-                <div style="margin-left:23%;">
-                    <p>{{ post.excerpt }}...</p>
+                <div style="margin-left:23%">
+                    <p style="word-wrap:break-word">{{ post.excerpt }}...</p>
                 </div>
                 <div class="read-more cl-effect-14">
                     <a href="{{ post.get_absolute_url }}" class="more-link">继续阅读 <span class="meta-nav">→</span></a>
