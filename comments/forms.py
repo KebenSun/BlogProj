@@ -6,4 +6,4 @@ class CommentForm(forms.ModelForm):
     """评论表单"""
     class Meta():
         model = Comment
-        fields = ['name', 'email', 'url', 'text']
+        fields = ['name', 'email', 'text']
