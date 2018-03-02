@@ -14,8 +14,14 @@ class Comment(models.Model):
     def __str__(self):
         return self.text[:20]
 
-class Likes(models.Model):
-    """点赞"""
+class Like(models.Model):
+    """赞"""
+    comment = models.ForeignKey('comments.Comment', on_delete=models.CASCADE)
+    ip = models.CharField(max_length=100)
+    created_time = models.DateTimeField(auto_now_add=True)
+
+class Tread(models.Model):
+    """踩"""
     comment = models.ForeignKey('comments.Comment', on_delete=models.CASCADE)
     ip = models.CharField(max_length=100)
     created_time = models.DateTimeField(auto_now_add=True)
